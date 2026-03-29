@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 To create a canvas where drawings can be made.
 	
 Known Issues:
-blah, blah, blah, blah
+When drawing on the canvas, it is not possible to move around the objects. The buttons place the object in a certain location.
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -105,8 +105,12 @@ function loadImage(){
    var img = new Image();
    img.src = "https://media.istockphoto.com/id/1299198919/photo/coastline-aerial-photograph-of-aquamarine-ocean-and-man-walking-along-white-sandbar-beach.jpg?s=612x612&w=0&k=20&c=xglVgYOap-BwwsG3vCnoRdq33yC6xVysP5Hat0D5hdM="
    img.onload = function (){
-      ctx.drawImage(img, 75, 75, 150, 150)
+      ctx.drawImage(img, 75, 75, 150, 150);
    }
+}
+
+function clearCanvas(){
+   ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 </script>
 
