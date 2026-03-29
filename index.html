@@ -25,45 +25,45 @@ https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
 	
-   <head> 
-      <title>App6---HTML5-Canvas</title>  <!--Displays the web page name-->
-      <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Scales the app to the size of different devices-->
-      <meta name="apple-mobile-web-app-capable" content="yes"> <!--Allows the app to work on mobile phones-->
-      <link rel="stylesheet" href="w3.css">
-      <link rel="stylesheet" href="w3-colors-flat.css">
-   </head> 
+<head> 
+    <title>App6---HTML5-Canvas</title>  <!--Displays the web page name-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Scales the app to the size of different devices-->
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!--Allows the app to work on mobile phones-->
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="w3-colors-flat.css">
+</head> 
 
 
 <script> 
-var docMod = document.lastModified; // loads last modified time stamp into docMod variable
-alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
-console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
-var canvas = document.getElementById("myCanvas"); // Finds canvas in HTML.
-var ctx = canvas.getContext("2d"); // Allows for drawing on canvas.
+	var canvas = document.getElementById("myCanvas"); // Finds canvas in HTML.
+	var ctx = canvas.getContext("2d"); // Allows for drawing on canvas.
 
-function drawRectangle(){ // Assigns a function to the Draw Rectangle button.
-   ctx.fillStyle = "lightblue"; // Makes the rectangle drawn light blue.
-   ctx.fillRect(50, 75, 200, 150) // Codes for the size and placement of the rectangle. The first value assigns the x-coordinate for the upper left corner of the rectangle and the second value assigns the y-coordinate for the upper left corner of the rectangle. The last two values are the width and height, respectively.
-}
+	function drawRectangle(){ // Assigns a function to the Draw Rectangle button.
+   		ctx.fillStyle = "lightblue"; // Makes the rectangle drawn light blue.
+   		ctx.fillRect(50, 75, 200, 150) // Codes for the size and placement of the rectangle. The first value assigns the x-coordinate for the upper left corner of the rectangle and the second value assigns the y-coordinate for the upper left corner of the rectangle. The last two values are the width and height, respectively.
+	}
 
-function drawName(){ // Assigns a function to the Draw Name button.
-   ctx.font = "50 px Arial"; // Assigns font size and font style to the text.
-   ctx.fillStyle = "black"; // Makes the text of the name black.
-   ctx.fillText("Kelly", 140, 150); // Prints the text "Kelly" in the coordinates (140, 150) inside the canvas.
-}
+	function drawName(){ // Assigns a function to the Draw Name button.
+   		ctx.font = "50px Arial"; // Assigns font size and font style to the text.
+   		ctx.fillStyle = "black"; // Makes the text of the name black.
+   		ctx.fillText("Kelly", 140, 150); // Prints the text "Kelly" in the coordinates (140, 150) inside the canvas.
+	}
 
-function loadImage(){ // This assigns a function to the Load Image button, basically tells the button what to do.
-   var img = new Image(); // 
-   img.src = "https://media.istockphoto.com/id/1299198919/photo/coastline-aerial-photograph-of-aquamarine-ocean-and-man-walking-along-white-sandbar-beach.jpg?s=612x612&w=0&k=20&c=xglVgYOap-BwwsG3vCnoRdq33yC6xVysP5Hat0D5hdM=" // Pastes the image on to the canvas using the url.
-   img.onload = function (){
-      ctx.drawImage(img, 75, 75, 150, 150); // This places the image inside the canvas. The first two values are the x and y coordinates of the image. The last two values are the width and height of the image.
-   }
-}
+	function loadImage(){ // This assigns a function to the Load Image button, basically tells the button what to do.
+   		var img = new Image(); // 
+   		img.src = "https://media.istockphoto.com/id/1299198919/photo/coastline-aerial-photograph-of-aquamarine-ocean-and-man-walking-along-white-sandbar-beach.jpg?s=612x612&w=0&k=20&c=xglVgYOap-BwwsG3vCnoRdq33yC6xVysP5Hat0D5hdM=" // Pastes the image on to the canvas using the url.
+   		img.onload = function (){
+      		ctx.drawImage(img, 75, 75, 150, 150); // This places the image inside the canvas. The first two values are the x and y coordinates of the image. The last two values are the width and height of the image.
+   		}
+	}
 
-function clearCanvas(){ // This function is for the Clear Canvas button.
-   ctx.clearRect(0, 0, canvas.width, canvas.height); // This allows the click of the button to clear the entire canvas.
-}
+	function clearCanvas(){ // This function is for the Clear Canvas button.
+   		ctx.clearRect(0, 0, canvas.width, canvas.height); // This allows the click of the button to clear the entire canvas.
+	}
 
 </script> <!--This concludes the Java script code-->
 
@@ -91,27 +91,30 @@ function clearCanvas(){ // This function is for the Clear Canvas button.
 
 
 <body> <!-- Section that includes the information visible to the user -->
-<div id="header" class="w3-container w3-flat-carrot"> <!-- Creates the header for the page -->
-	<h1>App6---HTML5-Canvas</h1> <!-- Text for the header for the first page of the website -->
-</div>
+	<div id="header" class="w3-container w3-flat-carrot"> <!-- Creates the header for the page -->
+		<h1>App6---HTML5-Canvas</h1> <!-- Text for the header for the first page of the website -->
+	</div>
 	
-<div id="content" class="w3-container"> <!-- Includes the texts and buttons for the page -->
-	<p>Drawing Canvas</p> <!-- Displays text under the header and above the canvas -->
-	<canvas id="myCanvas" width="300" height="300" style="border:3px solid pink;"></canvas> <!-- Defines the canvas on HTML page. Creates the width, height, border thickness, and border color of the canvas.-->
+	<div id="content" class="w3-container"> <!-- Includes the texts and buttons for the page -->
+		<p>Drawing Canvas</p> <!-- Displays text under the header and above the canvas -->
+		<canvas id="myCanvas" width="300" height="300" style="border:3px solid pink;"></canvas> <!-- Defines the canvas on HTML page. Creates the width, height, border thickness, and border color of the canvas.-->
    
-   <br><br>
+   		<br><br>
 
-   <button onclick="drawRectangle()">Draw Rectangle</button> <!-- Creates the button to draw a rectangle-->
-   <button onclick="drawName()">Draw Name</button> <!-- Creates the button to draw name-->
-   <button onclick="loadImage()">Load Image</button> <!-- Creates the button to load image-->
-   <button onclick="clearCanvas()">Clear Canvas</button> <!-- Creates the button to clear canvas-->
+   		<button onclick="drawRectangle()">Draw Rectangle</button> <!-- Creates the button to draw a rectangle-->
+   		<button onclick="drawName()">Draw Name</button> <!-- Creates the button to draw name-->
+   		<button onclick="loadImage()">Load Image</button> <!-- Creates the button to load image-->
+   		<button onclick="clearCanvas()">Clear Canvas</button> <!-- Creates the button to clear canvas-->
 
-	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+		<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
-	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+		<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+
+	</div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
+	
 </body>
 </html>
