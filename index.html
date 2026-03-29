@@ -26,20 +26,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 -->
 	
    <head> 
-      <title>App6---HTML5-Canvas</title>  
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="apple-mobile-web-app-capable" content="yes">
+      <title>App6---HTML5-Canvas</title>  <!--Displays the web page name-->
+      <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Scales the app to the size of different devices-->
+      <meta name="apple-mobile-web-app-capable" content="yes"> <!--Allows the app to work on mobile phones-->
       <link rel="stylesheet" href="w3.css">
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 
 
-<script>
+<script> 
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
-var canvas = document.getElementById("myCanvas");
+var canvas = document.getElementById("myCanvas"); 
 var ctx = canvas.getContext("2d");
 
 function drawRectangle(){ // Assigns a function to the Draw Rectangle button.
@@ -53,27 +53,27 @@ function drawName(){ // Assigns a function to the Draw Name button.
    ctx.fillText("Kelly", 140, 150); // Prints the text "Kelly" in the coordinates (140, 150) inside the canvas.
 }
 
-function loadImage(){
-   var img = new Image();
-   img.src = "https://media.istockphoto.com/id/1299198919/photo/coastline-aerial-photograph-of-aquamarine-ocean-and-man-walking-along-white-sandbar-beach.jpg?s=612x612&w=0&k=20&c=xglVgYOap-BwwsG3vCnoRdq33yC6xVysP5Hat0D5hdM="
+function loadImage(){ // This assigns a function to the Load Image button, basically tells the button what to do.
+   var img = new Image(); // 
+   img.src = "https://media.istockphoto.com/id/1299198919/photo/coastline-aerial-photograph-of-aquamarine-ocean-and-man-walking-along-white-sandbar-beach.jpg?s=612x612&w=0&k=20&c=xglVgYOap-BwwsG3vCnoRdq33yC6xVysP5Hat0D5hdM=" // Pastes the image on to the canvas using the url.
    img.onload = function (){
-      ctx.drawImage(img, 75, 75, 150, 150);
+      ctx.drawImage(img, 75, 75, 150, 150); // This places the image inside the canvas. The first two values are the x and y coordinates of the image. The last two values are the width and height of the image.
    }
 }
 
-function clearCanvas(){
-   ctx.clearRect(0, 0, canvas.width, canvas.height);
+function clearCanvas(){ // This function is for the Clear Canvas button.
+   ctx.clearRect(0, 0, canvas.width, canvas.height); // This allows the click of the button to clear the entire canvas.
 }
 
-</script>
+</script> <!--This concludes the Java script code-->
 
 
-
+<!-- CSS that codes for the visual layout and style of the app -->
 <style>	
 .body {
      margin: 0em;
 }
-.page {
+.page { /* Controls the page layout */
     width: 100vw;
     height: 100vh;
     position: fixed;
