@@ -38,6 +38,33 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+
+function drawRectangle(){ // Assigns a function to the Draw Rectangle button.
+   ctx.fillStyle = "lightblue"; // Makes the rectangle drawn light blue.
+   ctx.fillRect(50, 75, 200, 150) // Codes for the size and placement of the rectangle. The first value assigns the x-coordinate for the upper left corner of the rectangle and the second value assigns the y-coordinate for the upper left corner of the rectangle. The last two values are the width and height, respectively.
+}
+
+function drawName(){ // Assigns a function to the Draw Name button.
+   ctx.font = "50 px Arial"; // Assigns font size and font style to the text.
+   ctx.fillStyle = "black"; // Makes the text of the name black.
+   ctx.fillText("Kelly", 140, 150); // Prints the text "Kelly" in the coordinates (140, 150) inside the canvas.
+}
+
+function loadImage(){
+   var img = new Image();
+   img.src = "https://media.istockphoto.com/id/1299198919/photo/coastline-aerial-photograph-of-aquamarine-ocean-and-man-walking-along-white-sandbar-beach.jpg?s=612x612&w=0&k=20&c=xglVgYOap-BwwsG3vCnoRdq33yC6xVysP5Hat0D5hdM="
+   img.onload = function (){
+      ctx.drawImage(img, 75, 75, 150, 150);
+   }
+}
+
+function clearCanvas(){
+   ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
 </script>
 
 
@@ -85,34 +112,5 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
-
-<script>
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-
-function drawRectangle(){ // Assigns a function to the Draw Rectangle button.
-   ctx.fillStyle = "lightblue"; // Makes the rectangle drawn light blue.
-   ctx.fillRect(50, 75, 200, 150) // Codes for the size and placement of the rectangle. The first value assigns the x-coordinate for the upper left corner of the rectangle and the second value assigns the y-coordinate for the upper left corner of the rectangle. The last two values are the width and height, respectively.
-}
-
-function drawName(){ // Assigns a function to the Draw Name button.
-   ctx.font = "50 px Arial"; // Assigns font size and font style to the text.
-   ctx.fillStyle = "black"; // Makes the text of the name black.
-   ctx.fillText("Kelly", 140, 150); // Prints the text "Kelly" in the coordinates (140, 150) inside the canvas.
-}
-
-function loadImage(){
-   var img = new Image();
-   img.src = "https://media.istockphoto.com/id/1299198919/photo/coastline-aerial-photograph-of-aquamarine-ocean-and-man-walking-along-white-sandbar-beach.jpg?s=612x612&w=0&k=20&c=xglVgYOap-BwwsG3vCnoRdq33yC6xVysP5Hat0D5hdM="
-   img.onload = function (){
-      ctx.drawImage(img, 75, 75, 150, 150);
-   }
-}
-
-function clearCanvas(){
-   ctx.clearRect(0, 0, canvas.width, canvas.height);
-}
-</script>
-
 </body>
 </html>
