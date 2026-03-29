@@ -90,9 +90,15 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 
-function drawRectangle(){ // Assigns a function to the Draw Rectangle Button.
+function drawRectangle(){ // Assigns a function to the Draw Rectangle button.
    ctx.fillStyle = "lightblue"; // Makes the rectangle drawn light blue.
    ctx.fillRect(50, 75, 200, 150) // Codes for the size and placement of the rectangle. The first value assigns the x-coordinate for the upper left corner of the rectangle and the second value assigns the y-coordinate for the upper left corner of the rectangle. The last two values are the width and height, respectively.
+}
+
+function drawName(){ // Assigns a function to the Draw Name button.
+   ctx.font = "50 px Arial"; // Assigns font size and font style to the text.
+   ctx.fillStyle = "black"; // Makes the text of the name black.
+   ctx.fillText("Kelly", 140, 150); // Prints the text "Kelly" in the coordinates (140, 150) inside the canvas.
 }
 </script>
 
