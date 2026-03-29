@@ -39,8 +39,8 @@ var docMod = document.lastModified; // loads last modified time stamp into docMo
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
-var canvas = document.getElementById("myCanvas"); 
-var ctx = canvas.getContext("2d");
+var canvas = document.getElementById("myCanvas"); // Finds canvas in HTML.
+var ctx = canvas.getContext("2d"); // Allows for drawing on canvas.
 
 function drawRectangle(){ // Assigns a function to the Draw Rectangle button.
    ctx.fillStyle = "lightblue"; // Makes the rectangle drawn light blue.
@@ -89,21 +89,22 @@ function clearCanvas(){ // This function is for the Clear Canvas button.
 }
 </style>
 
-<body>
-<div id="header" class="w3-container w3-flat-carrot">
-	<h1>App6---HTML5-Canvas</h1>
+
+<body> <!-- Section that includes the information visible to the user -->
+<div id="header" class="w3-container w3-flat-carrot"> <!-- Creates the header for the page -->
+	<h1>App6---HTML5-Canvas</h1> <!-- Text for the header for the first page of the website -->
 </div>
 	
-<div id="content" class="w3-container">
-	<p>Drawing Canvas</p>
-	<canvas id="myCanvas" width="300" height="300" style="border:3px solid pink;"></canvas>
+<div id="content" class="w3-container"> <!-- Includes the texts and buttons for the page -->
+	<p>Drawing Canvas</p> <!-- Displays text under the header and above the canvas -->
+	<canvas id="myCanvas" width="300" height="300" style="border:3px solid pink;"></canvas> <!-- Defines the canvas on HTML page. Creates the width, height, border thickness, and border color of the canvas.-->
    
    <br><br>
 
-   <button onclick="drawRectangle()">Draw Rectangle</button>
-   <button onclick="drawName()">Draw Name</button>
-   <button onclick="loadImage()">Load Image</button>
-   <button onclick="clearCanvas()">Clear Canvas</button>
+   <button onclick="drawRectangle()">Draw Rectangle</button> <!-- Creates the button to draw a rectangle-->
+   <button onclick="drawName()">Draw Name</button> <!-- Creates the button to draw name-->
+   <button onclick="loadImage()">Load Image</button> <!-- Creates the button to load image-->
+   <button onclick="clearCanvas()">Clear Canvas</button> <!-- Creates the button to clear canvas-->
 
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
